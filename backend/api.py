@@ -6,6 +6,7 @@ from rest_framework import routers
 from blog import views as blog_views
 from manager import views as manager_views
 from contact import views as contact_views
+from config import views as config_views
 
 # from contact.serializers import ContactSerializer
 # from rest_framework import generics
@@ -18,6 +19,8 @@ router.register(r'blog_categories', blog_views.BlogCategoryViewSet)
 
 router.register(r'managers', manager_views.MangerViewSet)
 router.register(r'contacts', contact_views.ContactViewSet)
+router.register(r'roadmaps', config_views.RoadmapViewSet)
+router.register(r'utils', config_views.UtilViewSet)
 
 
 

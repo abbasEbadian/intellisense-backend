@@ -45,6 +45,7 @@ INSTALLED_APPS += [
     'blog',
     'manager',
     'contact',
+    'config',
 ] 
 
 # Third party Apps
