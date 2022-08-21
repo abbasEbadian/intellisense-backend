@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'blog',
     'manager',
+    'contact',
 ] 
 
 # Third party Apps
