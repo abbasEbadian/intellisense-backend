@@ -3,4 +3,4 @@ from .models import Manager
 # Register your models here.
 @admin.register(Manager)
 class SomeModelAdmin(admin.ModelAdmin):  # instead of ModelAdmin
-    list_display = ['id']
+    list_display = ['id', 'user_id', 'investers']
