@@ -11,5 +11,5 @@ class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all().order_by('-created')
     serializer_class = ContactSerializer
     permission_classes = [permissions.AllowAny]
-
+    authentication_classes = []
 
