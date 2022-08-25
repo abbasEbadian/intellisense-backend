@@ -21,6 +21,7 @@ router.register(r'managers', manager_views.MangerViewSet)
 router.register(r'contacts', contact_views.ContactViewSet)
 router.register(r'roadmaps', config_views.RoadmapViewSet)
 router.register(r'utils', config_views.UtilViewSet)
+router.register(r'faq', config_views.FAQViewSet)
 
 
 
