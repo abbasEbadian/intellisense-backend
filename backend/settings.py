@@ -53,6 +53,7 @@ INSTALLED_APPS += [
     'rest_framework',
     'django_summernote',
     "corsheaders",
+    'multiselectfield',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True

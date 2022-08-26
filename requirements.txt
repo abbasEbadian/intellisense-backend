@@ -3,6 +3,7 @@ bleach==5.0.1
 Django==4.1
 django-cors-headers==3.13.0
 django-filter==22.1
+django-multiselectfield==0.1.12
 django-summernote==0.8.20.0
 djangorestframework==3.13.1
 importlib-metadata==4.12.0
