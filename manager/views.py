@@ -18,5 +18,6 @@ class MangerViewSet(viewsets.ModelViewSet):
         queryset = Manager.objects.all()
         queryset = [x for x in queryset if 'all' in x.corresponding_page or page in x.corresponding_page ]
         serializer = ManagerSerializer(queryset, many=True)
+        print(serializer.data)
         return Response(serializer.data)
 
