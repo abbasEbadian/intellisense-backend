@@ -1,3 +1,4 @@
+from random import randint
 from statistics import mode
 from django.db import models
 from django.contrib.auth import get_user_model
@@ -22,6 +23,8 @@ class Manager(models.Model):
         ('crypto', 'Crypto'),
     ], default='all')
 
+    image = models.ImageField(verbose_name="manager image", upload_to="managers/"+str(randint(0, 99999999999999))+"/", null=True, blank=True)
+    image_alt = models.CharField(verbose_name="manager image alt", max_length=255, null=True, blank=True)
 
     created = models.DateTimeField(auto_now_add=True)    
     updated = models.DateTimeField(auto_now=True)
