@@ -1,5 +1,4 @@
-from pyexpat import model
-from tabnanny import verbose
+from random import randint
 from django.db import models
 from solo.models import SingletonModel
 # Create your models here.
@@ -47,10 +46,12 @@ class FAQ(models.Model):
         return "FAQ: " + self.title
 
 
-class CenterSlider(SingletonModel):
-    first_slide_content = models.TextField(help_text="Search box will be appended to the end of this content")
-    second_slide_content = models.TextField()
-    third_slide_content = models.TextField()
+class CenterSlider(models.Model):
+    sequence = models.IntegerField(null=True)
+    content = models.TextField()
+    image = models.ImageField(upload_to="slide/"+str(randint(0, 99999999999999))+"/", null=True, blank=True)
+    image_mobile = models.ImageField(upload_to="slide/"+str(randint(0, 99999999999999))+"/", null=True, blank=True)
+    image_alt = models.CharField(verbose_name="image alt", max_length=255, null=True, blank=True)
 
     class Meta: 
         verbose_name = 'Centralized Slide'
@@ -58,4 +59,4 @@ class CenterSlider(SingletonModel):
 
 
     def __str__(self) :
-        return "Centeralized Slides"
+        return "Centeralized Slide "

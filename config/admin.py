@@ -18,8 +18,8 @@ class FAQAdmin(admin.ModelAdmin):  # instead of ModelAdmin
     list_display = ['id', 'title', 'sequence', 'content']
 
 
-class SliderAdmin(SummernoteModelAdmin, SingletonModelAdmin):  # instead of ModelAdmin
-    summernote_fields = ('first_slide_content',  'second_slide_content', 'third_slide_content')
+class SliderAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+    summernote_fields = ('content')
 
 admin.site.register(CenterSlider, SliderAdmin)
 # admin.site.register(CenterSlider, SingletonModelAdmin)

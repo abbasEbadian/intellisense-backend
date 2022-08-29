@@ -3,7 +3,8 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework.response import Response
-from .serializers import CenterSerializer, FAQSerializer, RoadmapSerializer, UtilSerializer
+# from .serializers import  FAQSerializer, RoadmapSerializer, UtilSerializer
+from .serializers import  FAQSerializer, RoadmapSerializer, UtilSerializer, CenterSerializer
 from .models import CenterSlider, Roadmap, Util, FAQ
 
 
