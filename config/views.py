@@ -25,7 +25,7 @@ class CenterViewSet(viewsets.ModelViewSet):
     queryset = CenterSlider.objects.all()
     serializer_class = CenterSerializer
     permission_classes = [permissions.AllowAny]
-
+    
 
 class FAQViewSet(viewsets.ModelViewSet):
     

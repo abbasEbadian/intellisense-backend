@@ -22,7 +22,7 @@ router.register(r'contacts', contact_views.ContactViewSet)
 router.register(r'roadmaps', config_views.RoadmapViewSet)
 router.register(r'utils', config_views.UtilViewSet)
 router.register(r'faq', config_views.FAQViewSet)
-router.register(r'centeralized', config_views.CenterViewSet)
+router.register(r'centralized', config_views.CenterViewSet)
 
 
 
