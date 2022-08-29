@@ -1,6 +1,7 @@
 from pyexpat import model
+from tabnanny import verbose
 from django.db import models
-
+from solo.models import SingletonModel
 # Create your models here.
 class Roadmap(models.Model):
     title = models.CharField(max_length=255, help_text="e.g. Phase 1")
@@ -44,3 +45,17 @@ class FAQ(models.Model):
 
     def __str__(self) :
         return "FAQ: " + self.title
+
+
+class CenterSlider(SingletonModel):
+    first_slide_content = models.TextField(help_text="Search box will be appended to the end of this content")
+    second_slide_content = models.TextField()
+    third_slide_content = models.TextField()
+
+    class Meta: 
+        verbose_name = 'Centralized Slide'
+        verbose_name_plural = 'Centralized Slides'
+
+
+    def __str__(self) :
+        return "Centeralized Slides"

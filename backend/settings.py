@@ -54,6 +54,7 @@ INSTALLED_APPS += [
     'django_summernote',
     "corsheaders",
     'multiselectfield',
+    'solo',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
